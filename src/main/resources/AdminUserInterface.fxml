@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="663.0" prefWidth="932.0" style="-fx-background-color: LightBlue;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PresentationLayer.Controller">
+    <children>
+        <Label layoutX="340.0" layoutY="45.0" style="-fx-background-color: white;" text="Food Delivery App - Administrator Page">
+            <font>
+                <Font name="Elephant Italic" size="12.0" />
+            </font>
+        </Label>
+        <Button fx:id="logInAdminButton" layoutX="435.0" layoutY="292.0" mnemonicParsing="false" onAction="#logInAdmin" style="-fx-background-color: LightBlue; -fx-border-color: white;" text="Log in" visible="true">
+            <font>
+                <Font name="Elephant Italic" size="12.0" />
+            </font>
+        </Button>
+        <TextField fx:id="usernameAdmin" layoutX="393.0" layoutY="147.0" promptText="Username" visible="true" />
+        <TextField fx:id="passwordAdmin" layoutX="394.0" layoutY="208.0" promptText="Password" visible="true" />
+        <Button fx:id="importProductsButton" layoutX="93.0" layoutY="122.0" mnemonicParsing="false" onAction="#setImportProductsButton" style="-fx-background-color: LightBlue; -fx-border-color: white;" text="Import products" visible="false">
+            <font>
+                <Font name="Elephant Italic" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="addProductButton" layoutX="93.0" layoutY="183.0" mnemonicParsing="false" onAction="#setAddProductButton" style="-fx-background-color: LightBlue; -fx-border-color: white;" text="Add product" visible="false">
+            <font>
+                <Font name="Elephant Italic" size="12.0" />
+            </font>
+        </Button>
+        <Label fx:id="addNameLabel" layoutX="244.0" layoutY="187.0" style="-fx-background-color: white;" text="Name" visible="false" />
+        <Label fx:id="addRatingLabel" layoutX="246.0" layoutY="223.0" style="-fx-background-color: white;" text="Rating" visible="false" />
+        <Label fx:id="addCaloriesLabel" layoutX="246.0" layoutY="258.0" style="-fx-background-color: white;" text="Calories" visible="false" />
+        <Label fx:id="addProteinLabel" layoutX="249.0" layoutY="296.0" style="-fx-background-color: white;" text="Protein" visible="false" />
+        <Label fx:id="addFatLabel" layoutX="249.0" layoutY="332.0" style="-fx-background-color: white;" text="Fat" visible="false" />
+        <Label fx:id="addSodiumLabel" layoutX="249.0" layoutY="364.0" style="-fx-background-color: white;" text="Sodium" visible="false" />
+        <Label fx:id="addPriceLabel" layoutX="249.0" layoutY="400.0" style="-fx-background-color: white;" text="Price" visible="false" />
+        <TextField fx:id="addNameField" layoutX="349.0" layoutY="183.0" promptText="Introduce name" visible="false" />
+        <TextField fx:id="addRatingField" layoutX="347.0" layoutY="219.0" promptText="Introduce rating" visible="false" />
+        <TextField fx:id="addCaloriesField" layoutX="349.0" layoutY="254.0" promptText="Introduce calories" visible="false" />
+        <TextField fx:id="addProteinField" layoutX="347.0" layoutY="292.0" promptText="Introduce protein" visible="false" />
+        <TextField fx:id="addFatField" layoutX="349.0" layoutY="328.0" promptText="Introduce fat" visible="false" />
+        <TextField fx:id="addSodiumField" layoutX="347.0" layoutY="360.0" promptText="Introduce sodium" visible="false" />
+        <TextField fx:id="addPriceField" layoutX="347.0" layoutY="396.0" promptText="Introduce price" visible="false" />
+        <Button fx:id="insertButton" layoutX="613.0" layoutY="291.0" mnemonicParsing="false" onAction="#addProduct" style="-fx-background-color: LightBlue; -fx-border-color: white;" text="Add" visible="false">
+            <font>
+                <Font name="Elephant Italic" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="deleteProductButton" layoutX="93.0" layoutY="246.0" mnemonicParsing="false" onAction="#setDeleteProductButton" style="-fx-background-color: LightBlue; -fx-border-color: white;" text="Delete product" visible="false">
+            <font>
+                <Font name="Elephant Italic" size="12.0" />
+            </font>
+        </Button>
+        <Label fx:id="deleteNameLabel" layoutX="255.0" layoutY="250.0" style="-fx-background-color: white;" text="Name" visible="false" />
+        <TextField fx:id="deleteNameField" layoutX="320.0" layoutY="246.0" promptText="Introduce name" visible="false" />
+        <Button fx:id="deleteButton" layoutX="565.0" layoutY="245.0" mnemonicParsing="false" onAction="#deleteProduct" style="-fx-background-color: LightBlue; -fx-border-color: white;" text="Delete" visible="false">
+            <font>
+                <Font name="Elephant Italic" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="modifyProductButton" layoutX="93.0" layoutY="316.0" mnemonicParsing="false" onAction="#setModifyProductButton" style="-fx-background-color: LightBlue; -fx-border-color: white;" text="Modify product" visible="false">
+            <font>
+                <Font name="Elephant Italic" size="12.0" />
+            </font>
+        </Button>
+        <Label fx:id="modifyNameLabel" layoutX="243.0" layoutY="319.0" text="Name" visible="false" />
+        <Label fx:id="modifyRatingLabel" layoutX="246.0" layoutY="363.0" text="Rating" visible="false" />
+        <Label fx:id="modifyCaloriesLabel" layoutX="248.0" layoutY="409.0" text="Calories" visible="false" />
+        <Label fx:id="modifyProteinLabel" layoutX="248.0" layoutY="454.0" text="Protein" visible="false" />
+        <Label fx:id="modifyFatLabel" layoutX="252.0" layoutY="497.0" text="Fat" visible="false" />
+        <Label fx:id="modifySodiumLabel" layoutX="252.0" layoutY="538.0" text="Sodium" visible="false" />
+        <Label fx:id="modifyPriceLabel" layoutX="255.0" layoutY="578.0" text="Price" visible="false" />
+        <TextField fx:id="modifyNameField" layoutX="361.0" layoutY="315.0" promptText="Introduce name" visible="false" />
+        <TextField fx:id="modifyRatingField" layoutX="361.0" layoutY="361.0" promptText="Introduce rating" visible="false" />
+        <TextField fx:id="modifyCaloriesField" layoutX="361.0" layoutY="405.0" promptText="Introduce calories" visible="false" />
+        <TextField fx:id="modifyProteinField" layoutX="361.0" layoutY="450.0" promptText="Introduce protein" visible="false" />
+        <TextField fx:id="modifyFatField" layoutX="361.0" layoutY="493.0" promptText="Introduce fat" visible="false" />
+        <TextField fx:id="modifySodiumField" layoutX="361.0" layoutY="534.0" promptText="Introduce sodium" visible="false" />
+        <TextField fx:id="modifyPriceField" layoutX="357.0" layoutY="574.0" promptText="Introduce price" visible="false" />
+        <Button fx:id="modifyButton" layoutX="637.0" layoutY="461.0" mnemonicParsing="false" onAction="#modifyProduct" style="-fx-background-color: LightBlue; -fx-border-color: white;" text="Modify" visible="false" />
+        <Button fx:id="createCompositeButton" layoutX="93.0" layoutY="384.0" mnemonicParsing="false" onAction="#setCreateCompositeButton" style="-fx-background-color: LightBlue; -fx-border-color: white;" text="Create composite product" visible="false">
+            <font>
+                <Font name="Elephant Italic" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="generateReport1" layoutX="93.0" layoutY="442.0" mnemonicParsing="false" onAction="#generateReport1" style="-fx-background-color: LightBlue; -fx-border-color: white;" text="Generate report on time interval" visible="false">
+            <font>
+                <Font name="Elephant Italic" size="12.0" />
+            </font>
+        </Button>
+        <TextField fx:id="field11" layoutX="320.0" layoutY="441.0" promptText="Introduce start hour" visible="false" />
+        <TextField fx:id="field12" layoutX="481.0" layoutY="441.0" promptText="Introduce end hour" visible="false" />
+        <Button fx:id="generate1" layoutX="689.0" layoutY="441.0" mnemonicParsing="false" onAction="#generate1" style="-fx-background-color: LightBlue; -fx-border-color: white;" text="Generate" visible="false">
+            <font>
+                <Font name="Elephant Italic" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="generateReport2" layoutX="93.0" layoutY="493.0" mnemonicParsing="false" onAction="#generateReport2" style="-fx-background-color: LightBlue; -fx-border-color: white;" text="Generate report with products ordered &quot;x&quot; times" visible="false">
+            <font>
+                <Font name="Elephant Italic" size="12.0" />
+            </font>
+        </Button>
+        <TextField fx:id="field21" layoutX="432.0" layoutY="493.0" promptText="Number of times" visible="false" />
+        <Button fx:id="generate2" layoutX="663.0" layoutY="492.0" mnemonicParsing="false" onAction="#generate2" style="-fx-background-color: LightBlue; -fx-border-color: white;" text="Generate" visible="false">
+            <font>
+                <Font name="Elephant Italic" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="generateReport3" layoutX="91.0" layoutY="544.0" mnemonicParsing="false" onAction="#generateReport3" style="-fx-background-color: LightBlue; -fx-border-color: white;" text="Generate report on clients and order value" visible="false">
+            <font>
+                <Font name="Elephant Italic" size="12.0" />
+            </font>
+        </Button>
+        <TextField fx:id="field31" layoutX="398.0" layoutY="545.0" promptText="Number of orders" visible="false" />
+        <TextField fx:id="field32" layoutX="552.0" layoutY="544.0" promptText="Amount" visible="false" />
+        <Button fx:id="generate3" layoutX="742.0" layoutY="545.0" mnemonicParsing="false" onAction="#generate3" style="-fx-background-color: LightBlue; -fx-border-color: white;" text="Generate" visible="false">
+            <font>
+                <Font name="Elephant Italic" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="generateReport4" layoutX="91.0" layoutY="597.0" mnemonicParsing="false" onAction="#generateReport4" style="-fx-background-color: LightBlue; -fx-border-color: white;" text="Generate report with products ordered in a day" visible="false">
+            <font>
+                <Font name="Elephant Italic" size="12.0" />
+            </font>
+        </Button>
+        <TextField fx:id="field41" layoutX="433.0" layoutY="597.0" promptText="Introduce day" visible="false" />
+        <Button fx:id="generate4" layoutX="638.0" layoutY="597.0" mnemonicParsing="false" onAction="#generate4" style="-fx-background-color: LightBlue; -fx-border-color: white;" text="Generate" visible="false">
+            <font>
+                <Font name="Elephant Italic" size="12.0" />
+            </font>
+        </Button>
+
+        <Button layoutX="91.0" layoutY="41.0" mnemonicParsing="false" onAction="#closeMain" style="-fx-background-color: LightBlue; -fx-border-color: white;" text="Back">
+            <font>
+                <Font name="Elephant Italic" size="12.0" />
+            </font>
+        </Button>
+
+    </children>
+</AnchorPane>

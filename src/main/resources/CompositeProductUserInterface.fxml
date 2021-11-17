@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="667.0" prefWidth="943.0" style="-fx-background-color: LightBlue;"
+            xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PresentationLayer.Controller">
+    <TableView fx:id="productsTable" layoutX="18.0" layoutY="82.0" prefHeight="200.0" prefWidth="908.0" visible="false">
+        <columns>
+            <TableColumn fx:id="nameBase" prefWidth="440.79996967315674" text="Name"/>
+            <TableColumn fx:id="ratingBase" prefWidth="88.79998779296875" text="Rating"/>
+            <TableColumn fx:id="caloriesBase" prefWidth="86.39996337890625" text="Calories"/>
+            <TableColumn fx:id="proteinBase" prefWidth="78.4000244140625" text="Protein"/>
+            <TableColumn fx:id="fatBase" prefWidth="62.40008544921875" text="Fat"/>
+            <TableColumn fx:id="sodiumBase" prefWidth="78.39990234375" text="Sodium"/>
+            <TableColumn fx:id="priceBase" prefWidth="72.800048828125" text="Price"/>
+        </columns>
+    </TableView>
+    <Button fx:id="createCompositeButton" style="-fx-background-color: LightBlue; -fx-border-color: white;"
+            layoutX="416.0" layoutY="24.0" mnemonicParsing="false"
+            onAction="#setCompositeElements" text="Create product" visible="true">
+        <font>
+            <Font name="Elephant Italic" size="12.0"/>
+        </font>
+    </Button>
+    <TextArea fx:id="compositeElements" layoutX="17.0" layoutY="301.0" prefHeight="200.0" prefWidth="908.0"
+              visible="false"/>
+    <Label fx:id="label1" layoutX="60.0" layoutY="531.0" text="Name of the new product:" visible="false"/>
+    <Label fx:id="label2" layoutX="60.0" layoutY="568.0" text="Sodium" visible="false"/>
+    <Label fx:id="label3" layoutX="60.0" layoutY="604.0" text="Fat" visible="false"/>
+    <Label fx:id="label4" layoutX="526.0" layoutY="531.0" text="Protein" visible="false"/>
+    <Label fx:id="label5" layoutX="526.0" layoutY="568.0" text="Calories" visible="false"/>
+    <Label fx:id="label6" layoutX="526.0" layoutY="604.0" text="Price" visible="false"/>
+    <TextField fx:id="compositeName" layoutX="219.0" layoutY="528.0" promptText="Introduce name" visible="false"/>
+    <TextField fx:id="compositeFat" layoutX="126.0" layoutY="600.0" visible="false"/>
+    <TextField fx:id="compositeSodium" layoutX="136.0" layoutY="564.0" visible="false"/>
+    <TextField fx:id="compositeProtein" layoutX="588.0" layoutY="526.0" visible="false"/>
+    <TextField fx:id="compositeCalories" layoutX="588.0" layoutY="565.0" visible="false"/>
+    <TextField fx:id="compositePrice" layoutX="588.0" layoutY="600.0" visible="false"/>
+    <Button fx:id="createCompositeProduct" style="-fx-background-color: LightBlue; -fx-border-color: white;"
+            layoutX="826.0" layoutY="599.0" mnemonicParsing="false"
+            onAction="#createCompositeProduct" text="Create" visible="false">
+        <font>
+            <Font name="Elephant" size="12.0"/>
+        </font>
+    </Button>
+    <Button fx:id="deleteAllBaseProducts" style="-fx-background-color: LightBlue; -fx-border-color: white;"
+            layoutX="827.0" layoutY="539.0" mnemonicParsing="false"
+            onAction="#deleteSelectedBaseProducts" text="Delete" visible="false">
+        <font>
+            <Font name="Elephant" size="12.0"/>
+        </font>
+    </Button>
+    <Button fx:id="addBaseProduct" style="-fx-background-color: LightBlue; -fx-border-color: white;" layoutX="827.0" layoutY="46.0" mnemonicParsing="false" onAction="#getBaseProducts"
+            text="Add" visible="false" >
+        <font>
+            <Font name="Elephant" size="12.0"/>
+        </font>
+    </Button>
+    <Button onAction="#setAdminInterface" style="-fx-background-color: LightBlue; -fx-border-color: white;"
+            layoutX="55.0" layoutY="34.0" mnemonicParsing="false" text="Back">
+        <font>
+            <Font name="Elephant Italic" size="12.0"/>
+        </font>
+    </Button>
+</AnchorPane>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: LightBlue;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PresentationLayer.Controller">
+    <children>
+        <Label layoutX="241.0" layoutY="37.0" style="-fx-background-color: white;" text="Food Delivery App">
+            <font>
+                <Font name="Elephant Italic" size="12.0" />
+            </font>
+        </Label>
+        <Button fx:id="clientButton" layoutX="270.0" layoutY="101.0" mnemonicParsing="false" onAction="#setClientInterface" style="-fx-background-color: LightBlue; -fx-border-color: white;" text="Client">
+            <font>
+                <Font name="Elephant Italic" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="adminButton" layoutX="243.0" layoutY="169.0" mnemonicParsing="false" onAction="#setAdminInterface" style="-fx-background-color: LightBlue; -fx-border-color: white;" text="Administrator">
+            <font>
+                <Font name="Elephant Italic" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="employeeButton" layoutX="257.0" layoutY="245.0" mnemonicParsing="false" onAction="#setEmployeeInterface" style="-fx-background-color: LightBlue; -fx-border-color: white;" text="Employee">
+            <font>
+                <Font name="Elephant Italic" size="12.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

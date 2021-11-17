@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="663.0" prefWidth="932.0" style="-fx-background-color: PINK;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PresentationLayer.Controller">
+   <children>
+      <Label layoutX="373.0" layoutY="29.0" style="-fx-background-color: white;" text="Food Delivery App - Client Page">
+         <font>
+            <Font name="Elephant Italic" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="logInButton" layoutX="110.0" layoutY="288.0" mnemonicParsing="false" onAction="#logIn" style="-fx-background-color: pink; -fx-border-color: white;" text="Log in" visible="true">
+         <font>
+            <Font name="Elephant Italic" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="logInUsername" layoutX="69.0" layoutY="152.0" promptText="Username" visible="true" />
+      <TextField fx:id="logInPassword" layoutX="69.0" layoutY="206.0" promptText="Password" visible="true" />
+      <TextField fx:id="signUpUsername" layoutX="399.0" layoutY="151.0" promptText="Username" visible="true" />
+      <TextField fx:id="signUpPassword" layoutX="399.0" layoutY="205.0" promptText="Password" visible="true" />
+      <Button fx:id="signUpButton" layoutX="446.0" layoutY="288.0" mnemonicParsing="false" onAction="#signUp" style="-fx-background-color: pink; -fx-border-color: white;" text="Sign up" visible="true">
+         <font>
+            <Font name="Elephant Italic" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tableWithProducts" layoutX="12.0" layoutY="75.0" onMouseClicked="#getSelectedProducts" prefHeight="200.0" prefWidth="908.0" visible="false" >
+        <columns>
+          <TableColumn fx:id="product_name" prefWidth="397.5999698638916" text="Name" />
+          <TableColumn fx:id="product_rating" prefWidth="103.2000732421875" text="Rating" />
+            <TableColumn fx:id="product_calories" prefWidth="94.4000244140625" text="Calories" />
+            <TableColumn fx:id="product_protein" prefWidth="86.39996337890625" text="Protein" />
+            <TableColumn fx:id="product_fat" prefWidth="62.39996337890625" text="Fat" />
+            <TableColumn fx:id="product_sodium" prefWidth="64.79998779296875" text="Sodium" />
+            <TableColumn fx:id="product_price" prefWidth="95.199951171875" text="Price" />
+        </columns>
+      </TableView>
+      <TextArea fx:id="cart" layoutX="14.0" layoutY="300.0" prefHeight="200.0" prefWidth="467.0" visible="false"  />
+      <TextField fx:id="totalPrice" layoutX="141.0" layoutY="603.0" visible="false"  />
+      <Button fx:id="orderButton" layoutX="451.0" layoutY="603.0" mnemonicParsing="false" onAction="#placeOrder" style="-fx-background-color: pink; -fx-border-color: white;" text="Order" visible="false" >
+         <font>
+            <Font name="Elephant Italic" size="12.0" />
+         </font></Button>
+       <Button fx:id="closeButton" layoutX="16.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeMain" style="-fx-background-color: pink; -fx-border-color: white;" text="Back" visible="true" >
+           <font>
+               <Font name="Elephant Italic" size="12.0" />
+           </font></Button>
+      <Button fx:id="priceButton" layoutX="27.0" layoutY="603.0" mnemonicParsing="false" onAction="#showPrice" style="-fx-background-color: pink; -fx-border-color: white;" text="Total price" visible="false" >
+         <font>
+            <Font name="Elephant Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="clearCart" layoutX="333.0" layoutY="603.0" mnemonicParsing="false" onAction="#clearProducts" style="-fx-background-color: pink; -fx-border-color: white;" text="Refresh" visible="false" >
+         <font>
+            <Font name="Elephant Italic" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="label11" visible="false" layoutX="531.0" layoutY="291.0" text="Keyword" />
+      <Label fx:id="label21" visible="false" layoutX="530.0" layoutY="323.0" text="Rating" />
+      <Label fx:id="label31" visible="false" layoutX="532.0" layoutY="356.0" text="Calories" />
+      <Label fx:id="label41" visible="false" layoutX="532.0" layoutY="391.0" text="Proteins" />
+      <Label fx:id="label51" visible="false" layoutX="533.0" layoutY="426.0" text="Fats" />
+      <Label fx:id="label61" visible="false" layoutX="534.0" layoutY="460.0" text="Sodium" />
+      <Label fx:id="label71" visible="false" layoutX="534.0" layoutY="492.0" text="Price" />
+      <TextField fx:id="fieldName" visible="false" layoutX="628.0" layoutY="288.0" />
+      <TextField fx:id="fieldRating" visible="false" layoutX="628.0" layoutY="319.0" />
+      <TextField fx:id="fieldCalories" visible="false" layoutX="626.0" layoutY="352.0" />
+      <TextField fx:id="fieldProteins" visible="false" layoutX="626.0" layoutY="388.0" />
+      <TextField fx:id="fieldFats" visible="false" layoutX="628.0" layoutY="422.0" />
+      <TextField fx:id="fieldSodium" visible="false" layoutX="628.0" layoutY="456.0" />
+      <TextField fx:id="fieldPrice" visible="false" layoutX="628.0" layoutY="487.0" />
+      <Button fx:id="filter" onAction="#setFilter" visible="false"  layoutX="809.0" layoutY="379.0" mnemonicParsing="false" style="-fx-background-color: pink; -fx-border-color: white;" text="Filter" >
+          <font>
+              <Font name="Elephant Italic" size="12.0" />
+          </font>
+      </Button>
+   </children>
+</AnchorPane>
